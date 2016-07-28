@@ -28,20 +28,20 @@ Index
   right:0px;
 }
 #body{
-  width:calc(100% - 75px);
-  height:100vh;
-}
-div#landing_text{
   margin: 0px;
-  padding: 0px;
-  width: 50%;
-  height:30%;
+  padding: 2.5%;
+  width: calc(100%% - 75px);
+  height: 89.9vh;/*This is a temporary fix. Please help. Feel dumb. brain melting...*/
+}
+.landing_text{
+  width: 80%;
+  height: 40%;
 }
 #splash_img{
   margin: 0:
   padding: 0;
   width: calc(100% - 75px);
-  height: 100%:
+  height: 100vh:
 }
 #content_block{
 
@@ -53,20 +53,19 @@ div#landing_text{
 
 }
 /* Element Styling */
-div.home_button{
+
+/*div.home_button{
   margin:3%,0,0,3%;
   padding: 0;
   position: absolute;
   width: ;
   height: ;
   background-image: url('assets/asap.png');
-
-}
+}*/
 .bg-image{
-  margin: 3%;
-  padding: 0;
   background:url('assets/girl_in_car.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .nav{
@@ -82,6 +81,12 @@ img.splash_image{
   background-image: url(assets/striped_sweater.jpg);
   background-position: center;
 }
+h1.index_page{
+
+}
+p.index_page{
+
+  }
 /* Text Styling */
 
 .this-changes{

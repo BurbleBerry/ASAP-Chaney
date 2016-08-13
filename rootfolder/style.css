@@ -2,7 +2,8 @@
 /*
 Index
   1. Normalize
-  2. Structure
+  2. Style Guide Data
+  3. Structure
   .. Mobile Structure
 */
 
@@ -12,6 +13,21 @@ Index
   Padding:0px;
   margin:0px;
 }
+/* Style Guide Data
+
+    ---Colors-
+    Containers: Gold: #E7C42F
+                White: #E5E5E8
+                Blue: #1C1B4A
+                Black: #0D0C09
+                Grey: #757265
+
+    ---Fonts-
+    Display: font-family: 'Lora', serif;
+    Header: font-family: 'Alegreya Sans', sans-serif;
+    Body: font-family: 'Lora', serif;
+
+*/
 
 /* Structure */
 
@@ -26,77 +42,133 @@ Index
   position: fixed;
   top:0px;
   right:0px;
+
+  z-index: 2;
 }
-#body{
+#main_body{
+  position: absolute;
   margin: 0px;
-  padding: 2.5%;
-  width: calc(100%% - 75px);
-  height: 89.9vh;/*This is a temporary fix. Please help. Feel dumb. brain melting...*/
+  width: calc(100% - 75px);
+  height: 100vh;
 }
-.landing_text{
-  width: 80%;
-  height: 40%;
+#second_body{
+  position: absolute;
+  margin: 0px;
+  width: calc(100% - 75px);
+  height: 100%;
 }
-#splash_img{
+#landing{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+}
+#content_block{
+width: calc(100% - 75px);
+height: auto;
+}
+#splash_block{
   margin: 0:
   padding: 0;
   width: calc(100% - 75px);
   height: 100vh:
 }
-#content_block{
-
-}
 #gallery{
-
+  width: auto;
+  height: 200px;
+  margin: 0px ,auto;
+  text-align: justify;
+  z-index: 2;
 }
-#gallery_item{
-
+#gallery_margin{
+  display: inline-block;
+  margin: 2%;
+  margin-top: -2%;
 }
 /* Element Styling */
-
-/*div.home_button{
-  margin:3%,0,0,3%;
-  padding: 0;
-  position: absolute;
-  width: ;
-  height: ;
-  background-image: url('assets/asap.png');
-}*/
+    /*---Homepage*/
 .bg-image{
-  background:url('assets/girl_in_car.jpg');
+  background-image:url('assets/girl_in_car.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center-top;
+  z-index: 0;
+}
+.darker{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 .nav{
   list-style: none;
 }
-div#splash_container{
-  width: 100%;
-  height: 50vh:
-}
-img.splash_image{
-  max-height: 100%;
-  max-width: 100%;
-  background-image: url(assets/striped_sweater.jpg);
-  background-position: center;
+.about_mainbutton{
+  display: inline-block;
+  position: relative;
+  padding: .5%;
+  text-align: center;
 }
 h1.index_page{
-
+  width: 40%;
+  position: relative;
+  margin-bottom: 2%;
+  border-bottom-width: 1%;
+  border-bottom-style: solid;
+  border-bottom-color: #E7B821;
 }
 p.index_page{
-
-  }
+  margin-bottom: 3%;
+  position: relative;
+}
+.home_text{
+  padding-top: 10%;
+  padding-left: 2%;
+}
+    /*---Content Pages*/
+img.splash_image{
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.homebutton{
+  height: 70px;
+  width: 70px;
+  background-image: url(assets/asap_small.jpg);
+  z-index: 2;
+}
+.splash_class{
+  width: calc(100% - 75px);
+  height: 75vh;
+  padding:2%;
+}
+.page_body{
+  width: calc(100% - 75px);
+  height: auto;
+  padding: 2%;
+}
+.gallery_item{
+  width: 20%;
+  height: 96%;
+  background-color: #1C1B4A;
+}
 /* Text Styling */
-
-.this-changes{
+    /*---All Pages*/
+.nav-title{
   width:150px;
-  color:grey;
+  color: #E7C42F;
   transform: rotate(90deg);
   transition:all .3s;
   position:absolute;
   top:calc(50%);
   right:-40px;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  text-align: center;
 }
 .nav li{
   color: transparent;
@@ -106,12 +178,12 @@ p.index_page{
   font-size: 24pt;
   padding-left:50px;
 }
+.nav li a{
+  font-family: 'Lora', serif;
+}
 a{
   color: inherit;
   text-decoration: none;
-}
-.splash_block{
-
 }
 .image_preview{
 
@@ -126,18 +198,26 @@ p.body_copy{
 
 }
 h1.index_page{
-  font-size:30px;
-  line-height:33px;
-  text-decoration: none;
-  color:#ffffff;
+  font-family: 'Lora', serif;
+  font-size:42px;
+  line-height:50px;
+  color: #ffffff;
 }
 p.index_page{
   font-size:25px;
   line-height:30px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-style: 300;
   text-decoration: none;
   color:#ffffff;
 }
-
+div.about_mainbutton a{
+  color: #ffffff;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 20px;
+}
 /* Transitions */
 #sidebar{
   transition: all .5s;
@@ -146,13 +226,13 @@ p.index_page{
   width:30%;
   transition: all .5s;
 }
-#sidebar:hover .this-changes{
+#sidebar:hover .nav-title{
   color:white;
   transition:all .2s;
   transition-delay: .3s;
 }
 #sidebar:hover .nav li{
-  color:black;
+  color: #1C1B4A;
   transition: all .5s;
   transition-delay: .3s;
 }
